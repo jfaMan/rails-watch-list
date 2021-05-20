@@ -1,1 +1,6 @@
-<h1><%= 'List name: #{@list.name}' %></h1>
+<h1><%= "Top #{@list.name}" %></h1>
+
+
+
+
+<%= link_to "Add a movie to this list", new_list_bookmark_path(@list) %>

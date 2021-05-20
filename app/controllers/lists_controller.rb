@@ -18,11 +18,13 @@ class ListsController < ApplicationController
       redirect_to list_path(@list)
     else
       render :new
+    end
   end
 
   private
 
   def list_params
     params.require(:list).permit(:name)
+  end
 
 end
