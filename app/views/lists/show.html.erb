@@ -1,20 +1,26 @@
-<div class="container mt-5">
-  <h1><%= "Top #{@list.name}" %></h1>
-  <br>
-  <%= @list.photo.attached? ? cl_image_tag(@list.photo.key, width: 400, height: 300, crop: :fill) : image_tag("default.jpg", width: 400, height: 300, crop: :fill) %>
-  <ul>
-    <% @list.bookmarks.each do |bookmark| %>
-      <h2><%= "Title: #{bookmark.movie.title}" %></h2>
-      <p><%= "Overview: #{bookmark.movie.overview}" %></p>
-      <%= image_tag bookmark.movie.poster_url, alt: "poster" %>
-      <p><%= "Rating: #{bookmark.movie.rating}" %></p>
-      <p><%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this movie?' } %></p>
-    <% end %>
-  </ul>
-
-  <%= link_to "Add a movie to this list", new_list_bookmark_path(@list) %>
-  <br>
-  <%= link_to "Back to lists", lists_path %>  
+<div>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1595769816263-9b910be24d5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1958&q=80);">
+    <div class="container">
+      <h1><%= "Top #{@list.name}" %></h1>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <%= @list.photo.attached? ? cl_image_tag(@list.photo.key, width: 400, height: 300, crop: :fill) : image_tag("default.jpg", width: 400, height: 300, crop: :fill) %>
+    <ul>
+      <% @list.bookmarks.each do |bookmark| %>
+        <h2><%= "Title: #{bookmark.movie.title}" %></h2>
+        <p><%= "Overview: #{bookmark.movie.overview}" %></p>
+        <%= image_tag bookmark.movie.poster_url, alt: "poster" %>
+        <p><%= "Rating: #{bookmark.movie.rating}" %></p>
+        <p><%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this movie?' } %></p>
+      <% end %>
+    </ul>
+    <%= link_to "Add a movie to this list", new_list_bookmark_path(@list) %>
+    <br>
+    <%= link_to "Back to lists", lists_path %>  
+  </div>
 </div>
+
+
 
 
