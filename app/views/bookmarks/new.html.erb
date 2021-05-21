@@ -6,3 +6,5 @@
   <%= f.association :movie %>
   <%= f.button :submit %>
 <% end %>
+
+<%= link_to "Back to #{@list.name}", list_path(@list) %> 
