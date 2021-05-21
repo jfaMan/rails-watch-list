@@ -1,10 +1,14 @@
-<h2><%= "Add a movie to #{@list.name}" %></h2>
-<br>
+<div class="container mt-5">
+  <h2><%= "Add a movie to #{@list.name}" %></h2>
+  <br>
 
-<%= simple_form_for [ @list, @bookmark ] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.button :submit %>
-<% end %>
+  <%= simple_form_for [ @list, @bookmark ] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.button :submit %>
+  <% end %>
 
-<%= link_to "Back to #{@list.name}", list_path(@list) %> 
+  <%= link_to "Back to #{@list.name}", list_path(@list) %> 
+
+</div>
+

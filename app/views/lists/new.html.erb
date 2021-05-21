@@ -1,9 +1,11 @@
-<h1>Create a new movie list</h1>
+<div class="container mt-5">
+  <h1>Create a new movie list</h1>
 
-<%= simple_form_for(@list) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %> 
-<% end %>
-<br>
-<p><%= link_to "Back to lists", lists_path %></p>
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %> 
+  <% end %>
+  <br>
+  <p><%= link_to "Back to lists", lists_path %></p>
+</div>
