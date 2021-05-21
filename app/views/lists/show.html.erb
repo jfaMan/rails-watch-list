@@ -1,5 +1,6 @@
 <h1><%= "Top #{@list.name}" %></h1>
 <br>
+<%= @list.photo.attached? ? cl_image_tag(@list.photo.key, width: 400, height: 300, crop: :fill) : image_tag("default.jpg", width: 400, height: 300, crop: :fill) %>
 <ul>
   <% @list.bookmarks.each do |bookmark| %>
     <h2><%= "Title: #{bookmark.movie.title}" %></h2>

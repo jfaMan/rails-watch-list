@@ -3,9 +3,12 @@
   <ul>
     <% @lists.each do |list| %>
       <h3><%= link_to list.name, list_path(list.id) %></h3>
+      <%= list.photo.attached? ? cl_image_tag(list.photo.key, width: 400, height: 300, crop: :fill) : image_tag("default.jpg", width: 400, height: 300, crop: :fill) %>
     <% end %>
     <br>
     <p><%= link_to "Create a new movie list", new_list_path %></p>
   </ul>
+
+  
 
 </div>
