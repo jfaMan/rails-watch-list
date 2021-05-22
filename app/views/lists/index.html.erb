@@ -1,32 +1,17 @@
 <div>
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1595769816263-9b910be24d5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1958&q=80);">
     <div class="container">
-      <h1>Allan's Movie Watch List</h1>
-      <p>Find a movie to watch, anytime.</p>
-      <p><%= link_to "Create a new movie list", new_list_path, class: "btn btn-banner" %></p>
+      <h1>Lounge Movie Watch List</h1>
+      <p>Find a movie to watch. Share your favourites.</p>
+      <div class="mt-4"><%= link_to "Create a new movie list", new_list_path, class: "btn btn-banner" %></div>
     </div>
   </div>
-  <div class="container mt-5">
-    <ul>
-      <% @lists.each do |list| %>
-        <h3><%= link_to list.name, list_path(list.id) %></h3>
-        <%= list.photo.attached? ? cl_image_tag(list.photo.key, width: 400, height: 300, crop: :fill) : image_tag("default.jpg", width: 400, height: 300, crop: :fill) %>
-      <% end %>
-    </ul>
-  </div>
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-    </div>
-    <div class="footer-copyright">
-      This footer is made with <i class="fas fa-heart"></i> at Le Wagon by Allan
-    </div>
+  <div class="cards container mt-5">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path("default.jpg") %>)">
+        <%= link_to list.name, list_path(list), class: "card-link" %>
+        <h3><%= list.name %></h3>
+      </div>
+    <% end %>
   </div>
 </div>
-
-
-
-

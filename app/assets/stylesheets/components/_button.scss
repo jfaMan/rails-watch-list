@@ -12,7 +12,7 @@
   color: white;
   border: 1px solid white;
   padding: 8px 24px;
-  border-radius: 8px;
+  border-radius: 4px;
   font-weight: lighter;
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -20,6 +20,12 @@
 
 .btn-ghost:hover {
   opacity: 1;
+}
+
+.btn-banner:hover {
+  opacity: 1;
+  color:rgb(220, 220, 220);
+  border: 1px solid rgb(220, 220, 220);
 }
 
 .btn-flat {
