@@ -7,6 +7,23 @@
   </div>
   <div class="container mt-5">
     <% @list.bookmarks.each do |bookmark| %>
+
+    <div class="card" style="width: 18rem;">
+      <%= image_tag bookmark.movie.poster_url, alt: "poster" %>
+      <div class="card-body">
+        <h5 class="card-title font-weight-bold"><%= bookmark.movie.title %></h5>
+        <p class="card-text"><%= bookmark.movie.overview %></p>
+        <%= "Comment: #{bookmark.comment}" %>
+        <div>
+          <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this movie?' } do %>
+            <i class="fas fa-minus-circle"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+
+
       <div class="cards">
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path bookmark.movie.poster_url, alt: "poster" %>)">
           <div>
@@ -26,8 +43,27 @@
           <%= "Comment: #{bookmark.comment}" %>
         </div>
 
+        <div class="card-product">
+          <div class="card-product card-product-img">
+            <%= image_tag bookmark.movie.poster_url, alt: "poster" %>
+          </div>
+          <div class="card-product-infos">
+            <h2><%= bookmark.movie.title %></h2>
+            <p><%= bookmark.movie.overview %></p>
+            <p><%= "Rating: #{bookmark.movie.rating}" %></p>
+            <%= "Comment: #{bookmark.comment}" %>
+            <div>
+            <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this movie?' } do %>
+              <i class="fas fa-minus-circle"></i>
+            <% end %>
+          </div>
+          </div>
+        </div>
+
+
+        
+
     <% end %>
     </div>
   </div>
 </div>
-
