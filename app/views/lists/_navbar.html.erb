@@ -1,8 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="d-flex justify-content-center align-items-center">
-    <i class="fas fa-film"></i>
-    <div class="ml-1">AJS Studios</div>
-  </div>
+  <%= link_to lists_path, class: "nav-link" do %>
+    <div class="d-flex justify-content-center align-items-center">
+      <i class="fas fa-film"></i>
+      <div class="ml-1">AJS Studios</div>
+    </div>
+  <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

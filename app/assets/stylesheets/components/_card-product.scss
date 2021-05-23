@@ -8,6 +8,14 @@
   align-items: center;
 }
 
+.card-product i {
+  color: rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
 .card-product img {
   height: 100%;
   width: 120px;
