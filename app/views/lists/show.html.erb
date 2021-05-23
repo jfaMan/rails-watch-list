@@ -17,6 +17,7 @@
           <p class="card-text"><%= bookmark.movie.overview %></p>
           <p>---------------------</p>
           <p><em><%= "'#{bookmark.comment}'" %></em></p>
+          <p><strong><%= "Rating: #{bookmark.movie.rating}" %></strong></p>
           <div class="card-body-icon">
             <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this movie?' } do %>
               <i class="fas fa-minus-circle"></i>
