@@ -1,16 +1,12 @@
-<div class="container mt-5 w-50">
+<div class="container form shadow-sm mt-5">
   <h1><%= "Add a movie to #{@list.name}" %></h1>
   <br>
-
   <%= simple_form_for [ @list, @bookmark ] do |f| %>
     <%= f.input :comment %>
     <%= f.association :movie %>
-    <%= f.submit "Add movie", class: "btn btn-primary" %>
+    <div class='d-flex justify-content-between pt-5'>
+      <p><%= link_to "Back", list_path(@list), class: "btn btn-secondary" %></p>
+      <p><%= f.submit "Add movie", class: "btn btn-primary" %></p>
+    </div>
   <% end %>
-
-  <%= link_to list_path(@list) do %>
-  <i class="fas fa-long-arrow-alt-left"></i>
-  <% end %> 
-
 </div>
-
