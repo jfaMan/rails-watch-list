@@ -1,12 +1,10 @@
 <div>
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key, crop: :fill) : image_path("default.jpg", width: 400, height: 300, crop: :fill) %>)">
+  <div class="banner banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key, crop: :fill) : image_path("default.jpg", width: 400, height: 300, crop: :fill) %>)">
     <div class="container">
       <h1><%= "Best #{@list.name}" %></h1>
       <div class="mt-4"><%= link_to "Add a movie to this list", new_list_bookmark_path(@list), class: "btn btn-banner" %></div>
     </div>
   </div>
-
-
   <div class="container mt-5 d-flex justify-content-around">
     <% @list.bookmarks.each do |bookmark| %>
       <% url = "https://image.tmdb.org/t/p/w500#{bookmark.movie.poster_url}" %>
