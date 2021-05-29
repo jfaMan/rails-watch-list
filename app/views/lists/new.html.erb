@@ -4,8 +4,8 @@
     <%= f.input :name %>
     <%= f.input :photo, as: :file %>
     <div class='d-flex justify-content-between pt-5'>
-      <p><%= link_to "Back to lists", lists_path, class: "btn btn-secondary" %></p>
-      <p><%= f.submit "Create list", class: "btn btn-primary" %></p>
+      <p class='m-0'><%= link_to "Back to lists", lists_path, class: "btn btn-secondary" %></p>
+      <p class='m-0'><%= f.submit "Create list", class: "btn btn-primary" %></p>
     </div>
   <% end %>
   <br>
