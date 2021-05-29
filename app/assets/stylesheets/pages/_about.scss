@@ -5,15 +5,14 @@ img {
   margin: 24px 0px;
 }
 
-p {
-  width: 360px;
-  margin: 16px 0px;
-}
-
 .about-info {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  p {
+    width: 360px;
+    margin: 16px 0px; 
+  }
 }
