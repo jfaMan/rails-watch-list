@@ -1,8 +1,9 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 120px 0 150px 0;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
 .banner-show {
@@ -16,6 +17,7 @@
   font-size: 32px;
   font-weight: bold;
   text-shadow: 1px 1px 5px black;
+  font-size: 64px;
 }
 
 .banner p {
@@ -26,5 +28,5 @@
 
 .banner i {
   margin: 0px 10px 0px 0px;
-  font-size: 40px;
+  font-size: 72px;
 }
