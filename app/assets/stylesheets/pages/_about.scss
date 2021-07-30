@@ -15,4 +15,12 @@
     width: 360px;
     margin: 16px 0px; 
   }
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      text-decoration: underline;
+      
+    }
+  }
 }
