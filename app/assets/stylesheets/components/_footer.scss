@@ -48,3 +48,22 @@ body {
 }
 
 // CSS for sticky footer 
+
+@media (max-width: 575px) {
+  .footer {
+    align-items: flex-end;
+    padding: 0;
+    .footer-content {
+      display: block;
+      .footer-links {
+        justify-content: center;
+      }
+      .footer-break {
+        display: none;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

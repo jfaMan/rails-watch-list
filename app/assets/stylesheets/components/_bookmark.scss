@@ -1,0 +1,42 @@
+.bookmarks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  justify-content: center;
+  .bookmark {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 2px;
+  }
+  .bookmark-body {
+    text-align: center;
+    padding: 16px;
+    h5 {
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    p {
+      font-family: 'Roboto', sans-serif;
+    }
+    .bookmark-body-icon {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      font-size: larger;
+      i {
+        color: rgba(255, 255, 255, 0.3);
+        transition: 0.3s;
+      
+        &:hover {
+          color: rgba(255, 255, 255, 0.8);
+          font-size: x-large;
+        }
+      }
+    }
+  }
+}

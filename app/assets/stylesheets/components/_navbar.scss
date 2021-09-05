@@ -34,3 +34,18 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+@media (max-width: 575px) {
+  .navbar-lewagon .nav-link {
+    padding-left: 0;
+  }
+  .nav-logo {
+    font-size: 14px;
+  }
+  .navbar-right {
+    font-size: 14px;
+    :nth-child(2) :first-child {
+      padding-right: 0;
+    }
+  }
+}

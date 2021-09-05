@@ -11,23 +11,80 @@
 }
 
 // Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+@media (max-width: 575px) {
   .cards {
     grid-template-columns: 1fr 1fr;
+    .card-category {
+      height: 160px;
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+  .bookmarks {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+    // .bookmark {
+    //   flex-direction: row;
+    //   img {
+    //     width: 40%;
+    //     height: 40%;
+    //     margin: auto 16px auto 16px;
+    //   }
+    // }
+    img {
+      display: block;
+      width: 50%;
+      margin: 16px auto 16px auto;
+      border-radius: 8px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .bookmark-body .bookmark-body-icon i {
+      color: rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+    
+      &:hover {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: x-large;
+      }
+    }
+  }
+}
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 576px) and (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bookmarks {
+    grid-template-columns: 1fr 1fr;
+    img {
+      display: block;
+      width: 50%;
+      margin: 16px auto 16px auto;
+      border-radius: 8px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .bookmark-body .bookmark-body-icon i {
+      color: rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+    
+      &:hover {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: x-large;
+      }
+    }
   }
 }
 

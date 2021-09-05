@@ -5,3 +5,10 @@
   border-radius: 8px;
   background-color: white;
 }
+
+@media (max-width: 575px) {
+  .form {
+    width: auto;
+    margin: 20px;
+  }
+}

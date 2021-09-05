@@ -5,18 +5,19 @@
       <div class="mt-4"><%= link_to "Add a movie to this list", new_list_bookmark_path(@list), class: "btn btn-banner" %></div>
     </div>
   </div>
-  <div class="container mt-5 d-flex justify-content-around">
+  <div class="bookmarks container mt-5">
     <% @list.bookmarks.each do |bookmark| %>
       <% url = "https://image.tmdb.org/t/p/w500#{bookmark.movie.poster_url}" %>
-      <div class="card h-50 rounded-0 shadow-sm position-relative" style="width: 18rem;">
+      <div class="bookmark rounded-0 shadow-sm position-relative">
+        <%# <div class="bookmark-img"></div> %>
         <%= image_tag url, alt: "poster" %>
-        <div class="card-body">
+        <div class="bookmark-body">
           <h5 class="card-title font-weight-bold"><%= bookmark.movie.title %></h5>
           <p class="card-text"><%= bookmark.movie.overview %></p>
           <p>---------------------</p>
           <p><em><%= "'#{bookmark.comment}'" %></em></p>
           <p><strong><%= "Rating: #{bookmark.movie.rating}" %></strong></p>
-          <div class="card-body-icon">
+          <div class="bookmark-body-icon">
             <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure you want to remove this movie?' } do %>
               <i class="fas fa-minus-circle"></i>
             <% end %>
