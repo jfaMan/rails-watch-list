@@ -1,12 +1,15 @@
-<nav class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to lists_path, class: "nav-link" do %>
     <div class="nav-logo">
       <i class="fas fa-film"></i>
       <div class="ml-1">LOUNGE</div>
     </div>
   <% end %>
-  <div class="navbar-fullscreen-icons">
-    <ul class="navbar-right navbar-nav mr-auto">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto w-100">
       <li class="nav-item active">
         <%= link_to "Home", lists_path, class: "nav-link" %>
       </li>
@@ -15,17 +18,4 @@
       </li>
     </ul>
   </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-</nav>
-<div class="collapse navbar navbar-expand-sm" id="navbarToggleExternalContent">
-  <ul class="navbar-nav mr-auto w-100">
-    <li class="nav-item active">
-      <%= link_to "Home", lists_path, class: "nav-link" %>
-    </li>
-    <li class="nav-item active">
-      <%= link_to "About", about_path, class: "nav-link" %>
-    </li>
-  </ul>
 </div>

@@ -43,14 +43,6 @@
   }
 }
 
-.collapse {
-  background-color: white;
-  text-align: center;
-  a {
-    color: black;
-  }
-}
-
 @media (max-width: 575px) {
   .navbar-lewagon .nav-link {
     padding-left: 0;
@@ -64,8 +56,9 @@
       padding-right: 0;
     }
   }
-  .navbar-fullscreen-icons {
-    display: none;
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: center;
   }
 }
 
