@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 @media (max-width: 576px) {
+
+  // index
+
   .banner {
     padding: 90px 0 100px 0;
     h1 {
@@ -38,5 +41,12 @@
         font-size: 14px;
       }
     }
+  }
+
+  // new
+
+  .form {
+    width: auto;
+    margin: 20px;
   }
 }
