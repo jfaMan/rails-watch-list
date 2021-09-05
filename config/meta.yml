@@ -1,0 +1,5 @@
+meta_product_name: "Lounge"
+meta_title: "Lounge - Your go-to movie watchlist"
+meta_description: "Create and share movie watchlists based on genre. See what others recommend."
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account" # required for Twitter Cards
