@@ -5,17 +5,18 @@
       <div class="ml-1">LOUNGE</div>
     </div>
   <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto w-100">
-      <li class="nav-item active">
+  </button> %>
+  <div class="navbar-right" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <%# <li class="nav-item active">
         <%= link_to "Home", lists_path, class: "nav-link" %>
-      </li>
+      <%# </li> %>
       <li class="nav-item active">
         <%= link_to "About", about_path, class: "nav-link" %>
       </li>
     </ul>
   </div>
 </div>
+<%# Line 11 - use 'collapse navbar-collapse' for dropdown or 'navbar-right' for button %>

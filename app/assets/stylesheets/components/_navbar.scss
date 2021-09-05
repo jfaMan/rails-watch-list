@@ -44,8 +44,14 @@
 }
 
 @media (max-width: 575px) {
-  .navbar-lewagon .nav-link {
-    padding-left: 0;
+  .navbar-lewagon {
+    .nav-link {
+      padding-left: 0;
+    }
+    // .navbar-nav {
+    //   flex-direction: column;
+    //   align-items: center;
+    // }
   }
   .nav-logo {
     font-size: 14px;
@@ -56,9 +62,6 @@
       padding-right: 0;
     }
   }
-  .navbar-nav {
-    flex-direction: column !important;
-    align-items: center;
-  }
 }
 
+// toggle navbar-lewagon and navbar-nav for dropwdown
